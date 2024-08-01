@@ -1,0 +1,49 @@
+version: '3'
+
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: social-media-app
+    restart: always
+    # make a command for .htaccess
+    command: bash -c "a2enmod rewrite && service apache2 restart && tail -f /dev/null"
+    ports:
+      - "80:80"
+    env_file:
+      - .env
+    volumes:
+      - ./src/app:/var/www/html/app
+      - ./src/public:/var/www/html/public
+      - ./src/config:/var/www/html/config
+      - ./config/apache2:/etc/apache2/sites-available
+      - ./config/php.ini:/usr/local/etc/php/php.ini
+    # depends_on:
+    #   - db
+    # db:
+    #   image: mysql:8.0
+    #   container_name: social-media-db
+    #   restart: always
+    #   environment:
+    #     MYSQL_DATABASE: social_media_db
+    #     MYSQL_USER: username
+    #     MYSQL_PASSWORD: password
+    #     MYSQL_ROOT_PASSWORD: rootpassword
+    #   ports:
+    #     - "3306:3306"
+    #   volumes:
+    #     - ./storage/mysql:/var/lib/mysql
+    # phpmyadmin
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    container_name: social-media-phpmyadmin
+    restart: always
+    ports:
+      - "8080:80"
+    environment:
+      PMA_HOST: soctify.cp5nnrmvt3en.ap-northeast-1.rds.amazonaws.com
+      PMA_PORT: 3306
+      PMA_USER: admin
+      PMA_PASSWORD: FjQpB2%4tt%4
+      PMA_ARBITRARY: 1

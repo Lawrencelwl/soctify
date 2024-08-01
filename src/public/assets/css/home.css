@@ -1,0 +1,168 @@
+.social-card {
+  background: var(--bs-body-bg);
+  box-shadow: var(--s-shadow);
+  border-radius: 18px;
+  padding: 1rem;
+  max-width: 550px;
+  width: 100%;
+}
+
+.social-card hr {
+  opacity: 0.05;
+}
+
+.social-card-header {
+  padding: 0.9rem 0.7rem 0.9rem 0.9rem;
+}
+
+.social-card-content {
+  padding-left: 0.8rem;
+  padding-right: 0.8rem;
+}
+
+.text-dimmed {
+  color: #9597a1;
+  font-size: 12px;
+}
+
+/* the post create placeholder button */
+.btn-post-create {
+  display: flex;
+  align-items: center;
+  transition: background-color 0.1s ease-in-out;
+  outline: none;
+  border: none;
+  background-color: #f4f7f8;
+  border-radius: 0.8rem;
+  padding: 0.7rem 1.7rem;
+  cursor: pointer;
+  color: #b5bdc3;
+  font-size: 0.93rem;
+  font-weight: 300;
+  width: 100%;
+}
+
+.btn-post-create:hover {
+  background-color: #e9eef0;
+  color: #a1a1aa;
+}
+
+.btn-social-media {
+  display: flex;
+  align-items: center;
+}
+
+.btn-social-media span {
+  font-size: 0.9rem;
+  color: #a1a1aa;
+  margin-left: 5px;
+}
+
+.btn-social-media__img-icon {
+  color: #2dd4bf;
+}
+
+.btn-social-media__rec-icon {
+  color: #f87171;
+}
+
+.create-post-modal {
+  border: none;
+}
+
+.create-post-modal .modal-dialog {
+  max-width: 550px;
+}
+
+.create-post-modal .ql-editor.ql-blank::before {
+  color: rgba(0, 0, 0, 0.3);
+  font-size: 1.15rem;
+  font-style: normal;
+}
+
+.create-post-modal__editor {
+  min-height: 250px;
+}
+
+.preview-container {
+  width: 90%;
+}
+
+.toolbar-rounded-btn {
+  width: 40px;
+  height: 40px;
+  background-color: #f4f4f5;
+  border-radius: 50%;
+  outline: none;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.like-btn path {
+  stroke: #a1a1aa;
+}
+
+.like-btn.active {
+  background-color: rgba(100, 79, 255, 0.15);
+}
+
+.like-btn.active path {
+  stroke: var(--bs-primary);
+}
+
+/* Widget */
+
+.widget-follow-container {
+  width: 280px;
+}
+
+.widget-follow-container .card {
+  overflow: hidden;
+  flex-basis: 115px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 150px;
+  border: 1px solid #9597a135 !important;
+  border-radius: 12px;
+}
+
+.widget-follow-container .follow-btn {
+  padding: 1px 15px;
+  font-size: 0.9rem;
+}
+
+/* only  one child don't have margin */
+
+.social-card-content > :last-child {
+  margin-bottom: 0 !important;
+}
+
+.comment-box {
+  background-color: #f4f5f6;
+  border-radius: 0.8rem;
+  padding: 0.4rem 0.8rem;
+}
+
+.comment-box__title {
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+.comment-box__content {
+  font-size: 0.9rem;
+}
+
+#commentContainer {
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.widget-label {
+  max-width: 100px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}

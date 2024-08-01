@@ -1,0 +1,145 @@
+:root {
+  --bs-primary: #634fff;
+  --bs-primary-rgb: 99, 79, 255;
+  --s-shadow: 0 25px 100px -12px rgb(0 0 0 / 11%);
+}
+
+body {
+  font-family: "Inter", sans-serif;
+}
+
+/* make all image responsive as default */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.btn-primary {
+  --bs-btn-bg: #634fff;
+  --bs-btn-hover-bg: #5d48fc;
+  --bs-btn-active-bg: #5d48fc;
+  --bs-btn-disabled-bg: #634fff !important;
+  border: none;
+}
+
+.btn-transparent {
+  --bs-btn-bg: transparent;
+  border: none;
+}
+
+.btn-transparent:hover {
+  background-color: rgba(var(--bs-dark-rgb), 0.03);
+}
+
+.btn-transparent:active {
+  background-color: rgba(var(--bs-dark-rgb), 0.07) !important;
+}
+
+.btn-rounded {
+  border-radius: 50px;
+  padding: 0.63rem 1.5rem;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.form-control {
+  box-shadow: none !important;
+}
+
+.form-control:focus {
+  border-color: rgb(var(--bs-primary-rgb));
+}
+
+/* 
+Remove the default border of the navbar-toggler
+*/
+.navbar-toggler {
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.btn-close {
+  font-size: 12px;
+}
+
+.dropdown-item:active {
+  background-color: transparent !important;
+}
+
+.avatar,
+.avatar--sm {
+  vertical-align: middle;
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 50%;
+  max-width: none;
+}
+
+.avatar--sm {
+  width: 40px;
+  height: 40px;
+}
+
+.avatar--md {
+  width: 60px;
+  height: 60px;
+}
+
+.avatar--lg {
+  width: 150px;
+  height: 150px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.ml-auto {
+  margin-left: auto !important;
+}
+
+.mr-auto {
+  margin-right: auto !important;
+}
+
+.ui-autocomplete {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1510 !important;
+  float: left;
+  display: none;
+  min-width: 160px;
+  width: 160px;
+  padding: 4px 0;
+  margin: 2px 0 0 0;
+  list-style: none;
+  background-color: #ffffff;
+  border-color: #ccc;
+  border-color: rgba(0, 0, 0, 0.2);
+  border-style: solid;
+  border-width: 1px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+  *border-right-width: 2px;
+  *border-bottom-width: 2px;
+}
+
+.page-wrapper {
+  padding-top: 57px;
+}
+
+.following-btn {
+  border: 1px solid #634fff;
+  background-color: transparent !important;
+  color: #634fff !important;
+}

@@ -1,0 +1,6 @@
+{
+    "require": {
+        "aws/aws-sdk-php": "^3.261",
+        "cboden/ratchet": "^0.4.4"
+    }
+}
